@@ -280,16 +280,17 @@ export class AppComponent {
       ],
       chart: {
         type: "candlestick",
-        height: 350
+        height: 350,
+        width: '100%'
       },
       theme: {
-        mode: 'dark',
+        mode: 'light',
         palette: 'palette2',
         monochrome: {
-          enabled: false,
+          enabled: true,
           color: '#255aee',
-          shadeTo: 'dark',
-          shadeIntensity: 0.65
+          shadeTo: 'light',
+          shadeIntensity: 0
         },
       },
       title: {
