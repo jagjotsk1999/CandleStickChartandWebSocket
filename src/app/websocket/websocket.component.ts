@@ -11,9 +11,9 @@ import { WebSocketService } from '../web-socket.service';
 export class WebsocketComponent implements OnInit {
 
   constructor(private chatService: ChatService) {
-    chatService.messages.subscribe(res => {
-      alert('response received is ' + res)
-    })
+    // chatService.messages.subscribe(res => {
+    //   alert('response received is ' + res)
+    // })
   }
 
   private msg = {
@@ -21,11 +21,11 @@ export class WebsocketComponent implements OnInit {
     message: 'new message'
   }
 
-  sendMessage() {
-    console.log('new message from client to socket' + this.msg)
-    this.chatService.messages.next(this.msg)
-    this.msg.message = ''
-  }
+  // sendMessage() {
+  //   console.log('new message from client to socket' + this.msg)
+  //   this.chatService.messages.next(this.msg)
+  //   this.msg.message = ''
+  // }
 
   ngOnInit(): void {
   }

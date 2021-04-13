@@ -7,7 +7,8 @@ import {
   ApexChart,
   ApexYAxis,
   ApexXAxis,
-  ApexTitleSubtitle
+  ApexTitleSubtitle,
+  ApexTheme
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -16,6 +17,7 @@ export type ChartOptions = {
   xaxis: ApexXAxis;
   yaxis: ApexYAxis;
   title: ApexTitleSubtitle;
+  theme: ApexTheme
 };
 
 @Component({
@@ -280,9 +282,29 @@ export class AppComponent {
         type: "candlestick",
         height: 350
       },
+      theme: {
+        mode: 'dark',
+        palette: 'palette2',
+        monochrome: {
+          enabled: false,
+          color: '#255aee',
+          shadeTo: 'dark',
+          shadeIntensity: 0.65
+        },
+      },
       title: {
-        text: "CandleStick Chart",
-        align: "left"
+        text: 'candle stick chart by jagjot',
+        align: 'center',
+        margin: 10,
+        offsetX: 0,
+        offsetY: 0,
+        floating: true,
+        style: {
+          fontSize: '20px',
+          fontWeight: 'bold',
+          fontFamily: 'comic sans ms',
+          color: '#263238'
+        },
       },
       xaxis: {
         type: "datetime"
